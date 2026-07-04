@@ -1,0 +1,90 @@
+LBH SDK
+Lenguaje Binario HormigasAIS (LBH)
+
+Copyright (c) 2024-2026
+Cristhiam Leonardo Hernández Quiñonez (CLHQ)
+
+Fundador de HormigasAIS
+
+------------------------------------------------------------
+Aplicación de la Mozilla Public License 2.0
+------------------------------------------------------------
+
+El repositorio "lbh-sdk" implementa la referencia pública del
+protocolo Lenguaje Binario HormigasAIS (LBH).
+
+Este SDK se distribuye bajo los términos de la Mozilla Public
+License Version 2.0 (MPL-2.0).
+
+------------------------------------------------------------
+Componentes cubiertos por MPL-2.0
+------------------------------------------------------------
+
+• lbh_sdk.py
+• constants.py
+• exceptions.py
+• README.md
+• CHANGELOG.md
+• Suite de pruebas (tests/)
+• Implementación pública del SDK
+• API pública del protocolo LBH
+
+------------------------------------------------------------
+Componentes NO cubiertos por MPL-2.0
+------------------------------------------------------------
+
+La siguiente infraestructura NO forma parte del SDK público y
+permanece como implementación propietaria de HormigasAIS:
+
+• Nodo Maestro A16
+• Infraestructura de producción
+• Motores internos de HormigasAIS
+• XOXO y demás agentes propietarios
+• Archivos .human
+• Claves criptográficas privadas
+• Arquitectura operacional interna
+• Sistemas Carrier
+• Topología privada de la colonia
+
+------------------------------------------------------------
+Objetivo del SDK
+------------------------------------------------------------
+
+El propósito de este repositorio es proporcionar una
+implementación pública, estable y reutilizable del protocolo
+LBH para facilitar la interoperabilidad entre desarrolladores.
+
+Las mejoras realizadas sobre este SDK pueden proponerse mediante
+Pull Requests sin afectar directamente la infraestructura de
+producción de HormigasAIS.
+
+Toda integración con los sistemas propietarios es evaluada y
+aprobada exclusivamente por el mantenedor del proyecto.
+
+------------------------------------------------------------
+Autor
+------------------------------------------------------------
+
+Cristhiam Leonardo Hernández Quiñonez (CLHQ)
+
+HormigasAIS
+
+Nodo Maestro:
+A16 · San Miguel · El Salvador
+
+------------------------------------------------------------
+Repositorios oficiales
+------------------------------------------------------------
+
+SDK
+
+https://github.com/Thrumanshow/lbh-sdk
+
+Especificación oficial
+
+https://github.com/Thrumanshow/Lenguaje-Binario-HormigasAIS-
+
+Sitio oficial
+
+https://hormigasais.com
+
