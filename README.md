@@ -2,10 +2,25 @@
 
 ![Version](https://img.shields.io/badge/version-v0.3.0-blue)
 ![Status](https://img.shields.io/badge/status-stable-green)
+![License](https://img.shields.io/badge/license-MPL--2.0-orange)
+![Python](https://img.shields.io/badge/python-3.x-blue)
+![Tests](https://img.shields.io/badge/tests-16%20passing-brightgreen)
 
 SDK oficial de referencia del protocolo **LBH (Lenguaje Binario HormigasAIS)**.
 
 Implementación pública basada en la especificación **LBH_SPEC_v2.0.md**.
+
+---
+
+# Filosofía del proyecto
+
+LBH SDK nace con un objetivo muy claro:
+
+Construir una implementación pública, ligera, estable y reutilizable del protocolo LBH para facilitar la interoperabilidad entre desarrolladores sin exponer la infraestructura crítica de HormigasAIS.
+
+El SDK representa la capa pública del ecosistema.
+
+La infraestructura de producción (Nodo Maestro A16, agentes propietarios, gobernanza, motores internos y demás componentes estratégicos) permanece completamente separada y bajo control exclusivo de HormigasAIS.
 
 ---
 
@@ -25,14 +40,14 @@ Implementación pública basada en la especificación **LBH_SPEC_v2.0.md**.
 
 Todo paquete LBH sigue la siguiente estructura:
 
-```
+```text
 HEADER (8) | TYPE_CODE (8) | LENGTH (8) | PAYLOAD (N)
 ```
 
-```
+```text
 ┌─────────────┬─────────────┬─────────────┬────────────────────────┐
 │ HEADER      │ TYPE_CODE   │ LENGTH      │ PAYLOAD                │
-│ 8 hex       │ 8 hex       │ 8 hex       │ UTF-8 codificado a HEX │
+│ 8 hex       │ 8 hex       │ 8 hex       │ UTF-8 → HEX            │
 └─────────────┴─────────────┴─────────────┴────────────────────────┘
 ```
 
@@ -74,8 +89,6 @@ frame = lbh_sdk.encode_packet(
     "5345414C",
     "Hola LBH"
 )
-
-print(frame)
 
 decoded = lbh_sdk.decode_packet(frame)
 
@@ -127,19 +140,64 @@ except InvalidPacketError as e:
     print(e)
 ```
 
-El SDK incorpora excepciones específicas para facilitar la depuración sin romper la compatibilidad de la API pública.
+---
+
+# Casos de uso
+
+LBH SDK puede utilizarse para:
+
+- Comunicación entre agentes inteligentes.
+- Automatización distribuida.
+- Edge Computing.
+- Sistemas IoT.
+- Integración entre microservicios.
+- Protocolos Machine-to-Machine (M2M).
+- Automatización industrial.
+- Investigación sobre protocolos binarios.
+- Desarrollo de herramientas compatibles con el protocolo LBH.
 
 ---
 
 # Compatibilidad
 
 | SDK | Especificación |
-|-----|----------------|
+|------|----------------|
 | v0.3.x | LBH_SPEC_v2.0 |
 
 ---
 
-# Especificación oficial
+# Cómo contribuir
+
+Las contribuciones son bienvenidas.
+
+Puedes colaborar mediante:
+
+- Reportar errores.
+- Abrir Issues.
+- Enviar Pull Requests.
+- Mejorar la documentación.
+- Crear ejemplos.
+- Aumentar la cobertura de pruebas.
+
+Antes de enviar un Pull Request asegúrate de ejecutar:
+
+```bash
+python3 -m unittest discover tests
+```
+
+Todas las pruebas deben finalizar correctamente antes de enviar cambios.
+
+---
+
+# Documentación relacionada
+
+- CHANGELOG.md
+- LICENSE
+- NOTICE
+
+Repositorio del SDK:
+
+https://github.com/Thrumanshow/lbh-sdk
 
 Repositorio del protocolo:
 
@@ -151,32 +209,20 @@ Documento principal:
 
 ---
 
-# Documentación relacionada
-
-Repositorio del SDK:
-
-https://github.com/Thrumanshow/lbh-sdk
-
-Repositorio del protocolo:
-
-https://github.com/Thrumanshow/Lenguaje-Binario-HormigasAIS-
-
----
-
 # Estado del proyecto
 
 Versión actual:
 
 **v0.3.0**
 
-La API pública ha sido validada mediante **16 pruebas automatizadas**.
+API pública validada mediante **16 pruebas automatizadas**.
 
 ---
 
 # Roadmap
 
 - v0.4.0 — Modularización interna
-- v0.5.0 — Empaquetado Python
+- v0.5.0 — Empaquetado oficial para Python
 - v0.6.0 — SDK JavaScript
 - v1.0.0 — Primera versión estable
 
@@ -190,6 +236,6 @@ Fundador de HormigasAIS
 
 https://hormigasais.com
 
-Nodo maestro:
+Nodo Maestro:
 
 **A16 · San Miguel · El Salvador**
